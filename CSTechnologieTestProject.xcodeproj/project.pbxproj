@@ -17,6 +17,8 @@
 		CB542FDB2152BF4400DA0A04 /* CSTechnologieTestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FDA2152BF4400DA0A04 /* CSTechnologieTestProjectTests.swift */; };
 		CB542FE92152C9B400DA0A04 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FE82152C9B400DA0A04 /* PostsViewController.swift */; };
 		CB542FEB2152CBF300DA0A04 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FEA2152CBF300DA0A04 /* PostsModel.swift */; };
+		CB542FEE2152D69000DA0A04 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FED2152D69000DA0A04 /* PostsTableViewCell.swift */; };
+		CB542FF12152D75F00DA0A04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FF02152D75F00DA0A04 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		CB542FDC2152BF4500DA0A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB542FE82152C9B400DA0A04 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CB542FEA2152CBF300DA0A04 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		CB542FED2152D69000DA0A04 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		CB542FF02152D75F00DA0A04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DD74B359442F696697BD102E /* Pods_CSTechnologieTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTechnologieTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1A0B7C455A1A14BB14B65E /* Pods-CSTechnologieTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTechnologieTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSTechnologieTestProject/Pods-CSTechnologieTestProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,7 @@
 		CB542FC12152BF4200DA0A04 /* CSTechnologieTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				CB542FEF2152D74F00DA0A04 /* Constants */,
 				CB542FEC2152D56600DA0A04 /* Cells */,
 				CB542FE72152C96F00DA0A04 /* Controller */,
 				CB542FE62152C96900DA0A04 /* View */,
@@ -151,8 +156,17 @@
 		CB542FEC2152D56600DA0A04 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CB542FED2152D69000DA0A04 /* PostsTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CB542FEF2152D74F00DA0A04 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CB542FF02152D75F00DA0A04 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		FCFCD93F6C35E76FA610C7A3 /* Pods */ = {
@@ -331,8 +345,10 @@
 			files = (
 				CB542FE92152C9B400DA0A04 /* PostsViewController.swift in Sources */,
 				CB542FEB2152CBF300DA0A04 /* PostsModel.swift in Sources */,
+				CB542FEE2152D69000DA0A04 /* PostsTableViewCell.swift in Sources */,
 				CB542FC32152BF4200DA0A04 /* AppDelegate.swift in Sources */,
 				CB542FCB2152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld in Sources */,
+				CB542FF12152D75F00DA0A04 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
