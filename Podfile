@@ -6,6 +6,7 @@ target 'CSTechnologieTestProject' do
 
 	pod 'Alamofire'
   	pod 'SwiftyJSON'
+    pod 'RealmSwift'
 
   target 'CSTechnologieTestProjectTests' do
     inherit! :search_paths

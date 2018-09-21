@@ -21,6 +21,10 @@ class PostsModel{
         self._postTitle = postsTitle
         self._postBody = postBody
     }
+    init(postTitle: String){
+        self._postTitle = postTitle
+
+    }
 
     //Getters and Setters
     public var userId: Int{

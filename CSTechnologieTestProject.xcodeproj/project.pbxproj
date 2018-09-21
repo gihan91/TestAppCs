@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		553AB6C8406F19A26CE718F8 /* Pods_CSTechnologieTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5F2C87B13C95B6F4F680A7 /* Pods_CSTechnologieTestProject.framework */; };
 		AA70E6E19F39C635FCBA6151 /* Pods_CSTechnologieTestProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD74B359442F696697BD102E /* Pods_CSTechnologieTestProjectTests.framework */; };
+		CB14C3882154022200289E34 /* UserCommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14C3872154022200289E34 /* UserCommentsModel.swift */; };
 		CB542FC32152BF4200DA0A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FC22152BF4200DA0A04 /* AppDelegate.swift */; };
 		CB542FC82152BF4200DA0A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB542FC62152BF4200DA0A04 /* Main.storyboard */; };
 		CB542FCB2152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB542FC92152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld */; };
@@ -17,8 +18,11 @@
 		CB542FDB2152BF4400DA0A04 /* CSTechnologieTestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FDA2152BF4400DA0A04 /* CSTechnologieTestProjectTests.swift */; };
 		CB542FE92152C9B400DA0A04 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FE82152C9B400DA0A04 /* PostsViewController.swift */; };
 		CB542FEB2152CBF300DA0A04 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FEA2152CBF300DA0A04 /* PostsModel.swift */; };
-		CB542FEE2152D69000DA0A04 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FED2152D69000DA0A04 /* PostsTableViewCell.swift */; };
 		CB542FF12152D75F00DA0A04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FF02152D75F00DA0A04 /* Constants.swift */; };
+		CB542FF32152DBF100DA0A04 /* PostTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FF22152DBF100DA0A04 /* PostTitleTableViewCell.swift */; };
+		CB542FF52152DC8700DA0A04 /* PostTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FF42152DC8700DA0A04 /* PostTitleViewController.swift */; };
+		CB542FF72152EB4200DA0A04 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FF62152EB4200DA0A04 /* Keys.swift */; };
+		CB542FF92152F75000DA0A04 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FF82152F75000DA0A04 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 		6F5F2C87B13C95B6F4F680A7 /* Pods_CSTechnologieTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTechnologieTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D717DA008CC809CEF56231 /* Pods-CSTechnologieTestProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTechnologieTestProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSTechnologieTestProjectTests/Pods-CSTechnologieTestProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E2E5140DB97703FA332FD7D /* Pods-CSTechnologieTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTechnologieTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSTechnologieTestProject/Pods-CSTechnologieTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		CB14C3872154022200289E34 /* UserCommentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentsModel.swift; sourceTree = "<group>"; };
 		CB542FBF2152BF4200DA0A04 /* CSTechnologieTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTechnologieTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB542FC22152BF4200DA0A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB542FC72152BF4200DA0A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,8 +53,11 @@
 		CB542FDC2152BF4500DA0A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB542FE82152C9B400DA0A04 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CB542FEA2152CBF300DA0A04 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
-		CB542FED2152D69000DA0A04 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		CB542FF02152D75F00DA0A04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB542FF22152DBF100DA0A04 /* PostTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTitleTableViewCell.swift; sourceTree = "<group>"; };
+		CB542FF42152DC8700DA0A04 /* PostTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTitleViewController.swift; sourceTree = "<group>"; };
+		CB542FF62152EB4200DA0A04 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		CB542FF82152F75000DA0A04 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DD74B359442F696697BD102E /* Pods_CSTechnologieTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSTechnologieTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1A0B7C455A1A14BB14B65E /* Pods-CSTechnologieTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSTechnologieTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSTechnologieTestProject/Pods-CSTechnologieTestProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +91,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB14C386215395F300289E34 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				CB542FCE2152BF4400DA0A04 /* LaunchScreen.storyboard */,
+				CB542FC62152BF4200DA0A04 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		CB542FB62152BF4200DA0A04 = {
 			isa = PBXGroup;
 			children = (
@@ -106,14 +123,11 @@
 		CB542FC12152BF4200DA0A04 /* CSTechnologieTestProject */ = {
 			isa = PBXGroup;
 			children = (
-				CB542FEF2152D74F00DA0A04 /* Constants */,
-				CB542FEC2152D56600DA0A04 /* Cells */,
-				CB542FE72152C96F00DA0A04 /* Controller */,
-				CB542FE62152C96900DA0A04 /* View */,
 				CB542FE52152C96200DA0A04 /* Model */,
-				CB542FC22152BF4200DA0A04 /* AppDelegate.swift */,
+				CB542FE62152C96900DA0A04 /* View */,
+				CB542FE72152C96F00DA0A04 /* Controller */,
+				CB14C386215395F300289E34 /* StoryBoard */,
 				CB542FCC2152BF4400DA0A04 /* Assets.xcassets */,
-				CB542FCE2152BF4400DA0A04 /* LaunchScreen.storyboard */,
 				CB542FD12152BF4400DA0A04 /* Info.plist */,
 				CB542FC92152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld */,
 			);
@@ -132,7 +146,10 @@
 		CB542FE52152C96200DA0A04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CB542FEF2152D74F00DA0A04 /* Constants */,
 				CB542FEA2152CBF300DA0A04 /* PostsModel.swift */,
+				CB542FF82152F75000DA0A04 /* UserModel.swift */,
+				CB14C3872154022200289E34 /* UserCommentsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,7 +157,7 @@
 		CB542FE62152C96900DA0A04 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB542FC62152BF4200DA0A04 /* Main.storyboard */,
+				CB542FEC2152D56600DA0A04 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				CB542FE82152C9B400DA0A04 /* PostsViewController.swift */,
+				CB542FC22152BF4200DA0A04 /* AppDelegate.swift */,
+				CB542FF42152DC8700DA0A04 /* PostTitleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,7 +175,7 @@
 		CB542FEC2152D56600DA0A04 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CB542FED2152D69000DA0A04 /* PostsTableViewCell.swift */,
+				CB542FF22152DBF100DA0A04 /* PostTitleTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -165,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CB542FF02152D75F00DA0A04 /* Constants.swift */,
+				CB542FF62152EB4200DA0A04 /* Keys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -306,11 +326,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CSTechnologieTestProject/Pods-CSTechnologieTestProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,10 +369,14 @@
 			files = (
 				CB542FE92152C9B400DA0A04 /* PostsViewController.swift in Sources */,
 				CB542FEB2152CBF300DA0A04 /* PostsModel.swift in Sources */,
-				CB542FEE2152D69000DA0A04 /* PostsTableViewCell.swift in Sources */,
 				CB542FC32152BF4200DA0A04 /* AppDelegate.swift in Sources */,
+				CB542FF32152DBF100DA0A04 /* PostTitleTableViewCell.swift in Sources */,
 				CB542FCB2152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld in Sources */,
 				CB542FF12152D75F00DA0A04 /* Constants.swift in Sources */,
+				CB542FF72152EB4200DA0A04 /* Keys.swift in Sources */,
+				CB542FF92152F75000DA0A04 /* UserModel.swift in Sources */,
+				CB14C3882154022200289E34 /* UserCommentsModel.swift in Sources */,
+				CB542FF52152DC8700DA0A04 /* PostTitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
