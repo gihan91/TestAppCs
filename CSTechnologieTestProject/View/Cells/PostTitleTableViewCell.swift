@@ -19,6 +19,9 @@ class PostTitleTableViewCell: UITableViewCell {
     func setData(set: PostsModel){
         postTitleLabel.text = set.postTitle
     }
+    func setDataWithoutInternet(set: PostTitleModel){
+        postTitleLabel.text = set.titleName
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

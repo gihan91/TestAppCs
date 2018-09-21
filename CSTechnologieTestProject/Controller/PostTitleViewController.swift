@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Foundation
+import RealmSwift
 
 
 class PostTitleViewController: UIViewController {
@@ -28,6 +29,8 @@ class PostTitleViewController: UIViewController {
     var selectedPostUserId: Int = 0
     var selectedPostId: Int = 0
     var noOfComments: Int?
+
+    let realm = try! Realm()
 
 
     override func viewDidLoad() {
@@ -61,6 +64,13 @@ class PostTitleViewController: UIViewController {
                         self.titleList.append(allTitle)
                         self.userIdArray.append(userId)
 
+                        let postTitle = PostTitleModel()
+                        postTitle.titleName = title
+                        print(postTitle.titleName)
+                        try! self.realm.write {
+                            self.realm.add(postTitle)
+                        }
+
 
                     }
                 }
@@ -73,27 +83,42 @@ class PostTitleViewController: UIViewController {
             }
         }
     }
-    
 
 
 }
 
 extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleList.count
+        if Reachability.isConnectedToInternet{
+             return titleList.count
+        }
+        else{
+             return DBManager.sharedInstance.getDataFromDB().count
+        }
+
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTitleCell") as! PostTitleTableViewCell
-        let setTitleList = titleList[indexPath.row]
-        cell.setData(set: setTitleList)
-        return cell
+        if Reachability.isConnectedToInternet{
+            let setTitleList = titleList[indexPath.row]
+            cell.setData(set: setTitleList)
+            return cell
+
+        }
+        else{
+            let dataTitle =  DBManager.sharedInstance.getDataFromDB()
+            let allDataTitle = dataTitle[indexPath.row]
+            cell.setDataWithoutInternet(set: allDataTitle)
+            return cell
+
+        }
+
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let selectedItem = titleList[indexPath.row]
         selectedPostUserId = userIdArray[indexPath.row]
-        print(selectedPostId)
         selectedPostId = postIdCountAarray[indexPath.row]
 
         for selectedUserId in userList{
@@ -109,7 +134,6 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
 
             if selectedPostId == selectPostId.postId{
                 self.selectedPostCountId.append(selectedPostId)
-                print(selectedPostCountId.count)
                 self.noOfComments = self.selectedPostCountId.count
 
             }
@@ -118,8 +142,6 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
 
         }
          self.selectedPostCountId.removeAll()
-
-
 
 
         selectedPostTitle = selectedItem.postTitle
