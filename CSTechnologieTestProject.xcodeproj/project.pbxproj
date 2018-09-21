@@ -13,6 +13,7 @@
 		CB217C432154D34F00984C74 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB217C422154D34F00984C74 /* DBManager.swift */; };
 		CB217C462154D3BA00984C74 /* PostTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB217C452154D3BA00984C74 /* PostTitleModel.swift */; };
 		CB217C482154D66200984C74 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB217C472154D66200984C74 /* Reachability.swift */; };
+		CB217C4A2154F0EE00984C74 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB217C492154F0EE00984C74 /* MapViewController.swift */; };
 		CB542FC32152BF4200DA0A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB542FC22152BF4200DA0A04 /* AppDelegate.swift */; };
 		CB542FC82152BF4200DA0A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB542FC62152BF4200DA0A04 /* Main.storyboard */; };
 		CB542FCB2152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB542FC92152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 		CB217C422154D34F00984C74 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		CB217C452154D3BA00984C74 /* PostTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTitleModel.swift; sourceTree = "<group>"; };
 		CB217C472154D66200984C74 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CB217C492154F0EE00984C74 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CB542FBF2152BF4200DA0A04 /* CSTechnologieTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTechnologieTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB542FC22152BF4200DA0A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB542FC72152BF4200DA0A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				CB542FE82152C9B400DA0A04 /* PostsViewController.swift */,
 				CB542FC22152BF4200DA0A04 /* AppDelegate.swift */,
 				CB542FF42152DC8700DA0A04 /* PostTitleViewController.swift */,
+				CB217C492154F0EE00984C74 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				CB542FBC2152BF4200DA0A04 /* Frameworks */,
 				CB542FBD2152BF4200DA0A04 /* Resources */,
 				9426928469D96467445E2EF2 /* [CP] Embed Pods Frameworks */,
+				779D20C057D89880692DC6D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,6 +347,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		779D20C057D89880692DC6D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CSTechnologieTestProject/Pods-CSTechnologieTestProject-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSTechnologieTestProject/Pods-CSTechnologieTestProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9426928469D96467445E2EF2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +429,7 @@
 				CB542FF52152DC8700DA0A04 /* PostTitleViewController.swift in Sources */,
 				CB217C432154D34F00984C74 /* DBManager.swift in Sources */,
 				CB217C482154D66200984C74 /* Reachability.swift in Sources */,
+				CB217C4A2154F0EE00984C74 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

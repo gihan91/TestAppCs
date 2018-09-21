@@ -17,7 +17,7 @@ class UserCommentsModel{
         self._postName = postName
 
     }
-
+//Getters and Setters
     public var postId: Int{
         get{
             return _postId!

@@ -14,16 +14,18 @@ class UserModel{
     private var _userName: String?
     private var _userLatitude: Float?
     private var _userLong: Float?
+    private var _userCity: String?
 
-    init(userId: Int,name: String,userName: String,userLat: Float,userLong: Float){
+    init(userId: Int,name: String,userName: String,userLat: Float,userLong: Float,userCity: String){
         self._userId = userId
         self._name = name
         self._userName = userName
         self._userLatitude = userLat
         self._userLong = userLong
+        self._userCity = userCity
 
     }
-
+//Getters and setters
     public var userId: Int{
         get{
             return _userId!
@@ -63,6 +65,15 @@ class UserModel{
         }
         set{
             _userLong = newValue
+        }
+    }
+
+    public var userCity: String{
+        get{
+            return _userCity!
+        }
+        set{
+            _userCity = newValue
         }
     }
 

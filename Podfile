@@ -7,6 +7,8 @@ target 'CSTechnologieTestProject' do
 	pod 'Alamofire'
   	pod 'SwiftyJSON'
     pod 'RealmSwift'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
   target 'CSTechnologieTestProjectTests' do
     inherit! :search_paths

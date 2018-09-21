@@ -135,6 +135,13 @@
                                     <action selector="backPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAR-pQ-qAH"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-j5-gpW">
+                                <rect key="frame" x="0.0" y="167" width="375" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4RB-EG-A75"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -143,6 +150,7 @@
                             <constraint firstItem="owA-2x-J60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="G6G-cQ-A73"/>
                             <constraint firstItem="PkC-X2-7iz" firstAttribute="top" secondItem="c2f-98-14v" secondAttribute="bottom" constant="40" id="IOx-VM-3B4"/>
                             <constraint firstItem="I0q-Uu-fua" firstAttribute="leading" secondItem="PkC-X2-7iz" secondAttribute="trailing" constant="15" id="Jcy-ju-sgK"/>
+                            <constraint firstItem="ZBw-j5-gpW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kgv-qB-DR7"/>
                             <constraint firstItem="YlF-Ob-0wN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mm2-ek-pgl"/>
                             <constraint firstItem="vGk-ZA-pR9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PHM-ca-92N"/>
                             <constraint firstItem="c2f-98-14v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PJt-Jq-d6Y"/>
@@ -150,6 +158,7 @@
                             <constraint firstItem="0IM-0C-M9g" firstAttribute="top" secondItem="I0q-Uu-fua" secondAttribute="bottom" constant="40" id="VBr-lh-d79"/>
                             <constraint firstItem="J90-BN-Ubt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Wea-vG-29T"/>
                             <constraint firstItem="YlF-Ob-0wN" firstAttribute="leading" secondItem="c2f-98-14v" secondAttribute="trailing" constant="15" id="WoI-BY-TQJ"/>
+                            <constraint firstItem="ZBw-j5-gpW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bCi-Pl-cop"/>
                             <constraint firstItem="GJM-N4-bWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bfg-hQ-5SV"/>
                             <constraint firstItem="I0q-Uu-fua" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dLT-Zn-Sh3"/>
                             <constraint firstItem="J90-BN-Ubt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dQ8-Qt-bWf"/>
@@ -158,6 +167,7 @@
                             <constraint firstItem="YlF-Ob-0wN" firstAttribute="top" secondItem="J90-BN-Ubt" secondAttribute="bottom" constant="40" id="e44-Nl-k3Q"/>
                             <constraint firstItem="GJM-N4-bWG" firstAttribute="centerY" secondItem="0IM-0C-M9g" secondAttribute="centerY" id="hFV-JR-gQe"/>
                             <constraint firstItem="0IM-0C-M9g" firstAttribute="leading" secondItem="GJM-N4-bWG" secondAttribute="trailing" constant="15" id="mzG-CL-d0X"/>
+                            <constraint firstItem="ZBw-j5-gpW" firstAttribute="top" secondItem="c2f-98-14v" secondAttribute="bottom" constant="26" id="rNg-Ih-UE0"/>
                             <constraint firstItem="GJM-N4-bWG" firstAttribute="top" secondItem="PkC-X2-7iz" secondAttribute="bottom" constant="40" id="sSE-Of-G8s"/>
                             <constraint firstItem="owA-2x-J60" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="saB-iz-C6F"/>
                             <constraint firstItem="J90-BN-Ubt" firstAttribute="leading" secondItem="owA-2x-J60" secondAttribute="trailing" constant="15" id="tWr-wU-ZEb"/>
@@ -170,12 +180,28 @@
                         <outlet property="noOfComments" destination="0IM-0C-M9g" id="kb1-Fx-3vv"/>
                         <outlet property="postBodyLabel" destination="YlF-Ob-0wN" id="uy0-nD-TOc"/>
                         <outlet property="postTitleLabel" destination="J90-BN-Ubt" id="W6N-hq-ONI"/>
+                        <outlet property="userNameGestureView" destination="ZBw-j5-gpW" id="B9V-hq-IAR"/>
                         <outlet property="userNameLabel" destination="I0q-Uu-fua" id="Ji2-RI-CZt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1130.4000000000001" y="116.49175412293854"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="wzS-ck-9yF">
+            <objects>
+                <viewController storyboardIdentifier="mapView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Moe-TG-GaD" customClass="MapViewController" customModule="CSTechnologieTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="byT-Xu-V3c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TYv-NY-OW7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wl3-rt-LmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="117"/>
         </scene>
     </scenes>
 </document>

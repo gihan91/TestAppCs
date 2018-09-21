@@ -9,8 +9,8 @@
 import Foundation
 
 struct defaultKeys{
-    static let userId = "key_userId"
-    static let id = "key_id"
-    static let postTitle = "key_postTitle"
-    static let postBody = "key_postBody"
+    static let userLat = "key_userLat"
+    static let userLong = "key_userLong"
+    static let userCity = "key_userCity"
+  
 }

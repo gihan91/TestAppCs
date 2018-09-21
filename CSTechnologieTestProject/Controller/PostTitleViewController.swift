@@ -22,6 +22,9 @@ class PostTitleViewController: UIViewController {
     var userIdArray = [Int]()
     var postIdCountAarray = [Int]()
     var selectedPostCountId = [Int]()
+    var userLatArray = [Float]()
+    var userLonArray = [Float]()
+    var selectedUserCirty = [String]()
     var userList = [UserModel]()
     var selectedPostTitle = ""
     var selectedPostBody = ""
@@ -29,6 +32,9 @@ class PostTitleViewController: UIViewController {
     var selectedPostUserId: Int = 0
     var selectedPostId: Int = 0
     var noOfComments: Int?
+    var userLat: Float?
+    var userLong: Float?
+    var userCity: String?
 
     let realm = try! Realm()
 
@@ -126,6 +132,9 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
             let userId = selectedUserId.userId
             if userId == selectedPostUserId{
                 selectedPostUserName = selectedUserId.name
+                userLat = selectedUserId.userLat
+                userLong = selectedUserId.userLong
+                userCity = selectedUserId.userCity
 
             }
         }
@@ -137,8 +146,6 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
                 self.noOfComments = self.selectedPostCountId.count
 
             }
-
-
 
         }
          self.selectedPostCountId.removeAll()
@@ -157,6 +164,9 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
             vc.postBody = selectedPostBody
             vc.postUserName = selectedPostUserName
             vc.noOfCommentsCount = noOfComments!
+            vc.userLat = userLat
+            vc.userLong = userLong
+            vc.userCity = userCity
 
         }
     }
@@ -177,13 +187,20 @@ extension PostTitleViewController{
                         let id = eachData["id"].intValue
                         let name = eachData["name"].stringValue
                         let userName = eachData["username"].stringValue
-                        let userLat = eachData["lat"].floatValue
-                        let userLon = eachData["lng"].floatValue
-                        let userListAdd = UserModel(userId: id, name: name, userName: userName, userLat: userLat, userLong: userLon)
+                        let geoLocationsLat = eachData["address"]["geo"]["lat"].floatValue
+                        let geoLocationLong = eachData["address"]["geo"]["lng"].floatValue
+                        let userCity = eachData["address"]["city"].stringValue
+                        let userListAdd = UserModel(userId: id, name: name, userName: userName, userLat: geoLocationsLat, userLong: geoLocationLong, userCity: userCity)
+
                         self.userList.append(userListAdd)
+                        self.userLatArray.append(geoLocationsLat)
+                        self.userLonArray.append(geoLocationLong)
+                        self.selectedUserCirty.append(userCity)
+
 
 
                     }
+
                 }
                 self.titleListTableView.reloadData()
 
