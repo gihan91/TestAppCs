@@ -12,7 +12,7 @@
         <!--Post Title View Controller-->
         <scene sceneID="9ba-gY-p33">
             <objects>
-                <viewController id="rMq-aR-VQC" customClass="PostTitleViewController" customModule="CSTechnologieTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="titleTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rMq-aR-VQC" customClass="PostTitleViewController" customModule="CSTechnologieTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2g-rx-2bP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,13 +195,42 @@
                     <view key="view" contentMode="scaleToFill" id="byT-Xu-V3c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4d-i7-v5q" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D0-HD-Ii0">
+                                        <rect key="frame" x="10" y="20" width="34" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Moe-TG-GaD" eventType="touchUpInside" id="NTu-yA-0wY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6D0-HD-Ii0" firstAttribute="leading" secondItem="k4d-i7-v5q" secondAttribute="leading" constant="10" id="NGh-Re-Uc7"/>
+                                    <constraint firstItem="6D0-HD-Ii0" firstAttribute="top" secondItem="k4d-i7-v5q" secondAttribute="top" constant="20" id="YVL-n2-Ryd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k4d-i7-v5q" firstAttribute="trailing" secondItem="TYv-NY-OW7" secondAttribute="trailing" id="RiH-Nd-fkv"/>
+                            <constraint firstItem="k4d-i7-v5q" firstAttribute="top" secondItem="byT-Xu-V3c" secondAttribute="top" id="lfQ-NI-7J7"/>
+                            <constraint firstItem="k4d-i7-v5q" firstAttribute="bottom" secondItem="TYv-NY-OW7" secondAttribute="bottom" id="tFZ-wM-sVZ"/>
+                            <constraint firstItem="k4d-i7-v5q" firstAttribute="leading" secondItem="TYv-NY-OW7" secondAttribute="leading" id="ulj-ih-MKk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TYv-NY-OW7"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="6D0-HD-Ii0" id="JMy-EW-0kR"/>
+                        <outlet property="mapView" destination="k4d-i7-v5q" id="NBH-X2-cH8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wl3-rt-LmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-367" y="117"/>
+            <point key="canvasLocation" x="-367.19999999999999" y="116.49175412293854"/>
         </scene>
     </scenes>
 </document>

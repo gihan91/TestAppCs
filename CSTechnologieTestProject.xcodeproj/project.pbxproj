@@ -102,6 +102,7 @@
 		CB14C386215395F300289E34 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				CB542FCC2152BF4400DA0A04 /* Assets.xcassets */,
 				CB542FCE2152BF4400DA0A04 /* LaunchScreen.storyboard */,
 				CB542FC62152BF4200DA0A04 /* Main.storyboard */,
 			);
@@ -151,7 +152,6 @@
 				CB542FE62152C96900DA0A04 /* View */,
 				CB542FE72152C96F00DA0A04 /* Controller */,
 				CB14C386215395F300289E34 /* StoryBoard */,
-				CB542FCC2152BF4400DA0A04 /* Assets.xcassets */,
 				CB542FD12152BF4400DA0A04 /* Info.plist */,
 				CB542FC92152BF4200DA0A04 /* CSTechnologieTestProject.xcdatamodeld */,
 			);

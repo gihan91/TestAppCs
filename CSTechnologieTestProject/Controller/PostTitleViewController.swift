@@ -17,6 +17,7 @@ class PostTitleViewController: UIViewController {
     
     @IBOutlet weak var titleListTableView: UITableView!
 
+    
     var titleList = [PostsModel]()
     var commentList = [UserCommentsModel]()
     var userIdArray = [Int]()
@@ -52,6 +53,7 @@ class PostTitleViewController: UIViewController {
         titleListTableView.reloadData()
     }
 
+    //get AllPosts
     func getAllPosts(){
         Alamofire.request(post, method: .get).responseJSON{
             response in
@@ -78,6 +80,7 @@ class PostTitleViewController: UIViewController {
                         }
 
 
+
                     }
                 }
                 self.titleListTableView.reloadData()
@@ -93,8 +96,10 @@ class PostTitleViewController: UIViewController {
 
 }
 
+//MARK:- UITableViewData Sourse and Delegae
 extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Show post title count Title when Offline
         if Reachability.isConnectedToInternet{
              return titleList.count
         }
@@ -106,6 +111,7 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTitleCell") as! PostTitleTableViewCell
+        //setting up data when offline
         if Reachability.isConnectedToInternet{
             let setTitleList = titleList[indexPath.row]
             cell.setData(set: setTitleList)
@@ -127,6 +133,7 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
         selectedPostUserId = userIdArray[indexPath.row]
         selectedPostId = postIdCountAarray[indexPath.row]
 
+        //getting selected ID's User name.user latitude and longitude
         for selectedUserId in userList{
 
             let userId = selectedUserId.userId
@@ -139,6 +146,7 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
             }
         }
 
+        //Getting Number Of Comments for selected Post ID
         for selectPostId in commentList{
 
             if selectedPostId == selectPostId.postId{
@@ -156,7 +164,7 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
 
         performSegue(withIdentifier: "showDetails", sender: self)
     }
-
+    //send data to PostVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "showDetails") {
             let vc = segue.destination as! PostsViewController
@@ -174,7 +182,7 @@ extension PostTitleViewController:UITableViewDelegate,UITableViewDataSource{
 }
 
 extension PostTitleViewController{
-
+    //getting Users Details
     func getUsers(){
         Alamofire.request(users, method: .get).responseJSON{
             response in
@@ -212,7 +220,7 @@ extension PostTitleViewController{
         }
     }
 
-
+    //Getting Post Comments
     func getComments(){
         Alamofire.request(comments, method: .get).responseJSON{
             response in
